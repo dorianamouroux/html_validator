@@ -122,7 +122,7 @@ def validate(files, verbose=False):
             raise MissingHtmlFile("Missing HTML file to test: " + filename)
 
     # build the command to execute
-    cmd = ["java", "-Xss512k", "-jar", '%s' % vnu_path] + files
+    cmd = ["java", "-jar", '%s' % vnu_path] + files
     if verbose:
         print("Execute command:", " ".join(cmd))
 
